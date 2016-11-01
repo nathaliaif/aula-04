@@ -22,7 +22,7 @@ namespace Fiap.Exemplo01.MVC.Web.Controllers
         {
             _lista.Add(cliente);
             TempData["msg"] = "Cliente Cadastrado";
-            return View();
+            return RedirectToAction("Cadastrar"); //Redirect dentro do servidor
         }
 
         public ActionResult Listar()

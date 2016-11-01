@@ -1,0 +1,52 @@
+﻿@model Fiap.Exemplo01.MVC.Web.Models.Cliente
+
+@{
+    ViewBag.Title = "Cadastrar";
+}
+
+<h2>Cadastro de Clientes</h2>
+
+@if (TempData["msg"] != null)
+{
+    <div class="alert alert-success">
+        @TempData["msg"]
+    </div>
+}
+
+
+@using (Html.BeginForm())
+{
+    <div class="form-group">
+        @Html.LabelFor(c => c.Nome)
+        @Html.TextBoxFor(cli => cli.Nome, new { placeholder = "Digite seu nome", @class = "form-control"})
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(c => c.Idade)
+        @Html.TextBoxFor(c => c.Idade, new { placeholder = "Digite sua idade", @class = "form-control" })
+    </div>
+   
+    <div class="form-group">
+        @Html.LabelFor(c => c.Credito)
+        @Html.TextBoxFor(c => c.Credito, new { placeholder = "Digite seu crédito", @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(c => c.EstadoCivil)
+        @Html.TextBoxFor(c => c.EstadoCivil, new { placeholder = "Digite seu estado civil", @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(c => c.DataNascimento)
+        @Html.TextBoxFor(c => c.DataNascimento, new { @type = "date", @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        @Html.CheckBoxFor(c => c.NecessidadesEspeciais)
+        @Html.LabelFor(c => c.NecessidadesEspeciais)
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Salvar" class="btn btn-primary"/>
+    </div>
+
+}
