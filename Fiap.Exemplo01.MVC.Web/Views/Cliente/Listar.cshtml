@@ -11,8 +11,8 @@
             <th>Nome</th>
             <th>Idade</th>
             <th>Crédito</th>
-            <th>Necessidades Especiais</th>
             <th>Data Nascimento</th>
+            <th>Necessidades Especiais</th>
             <th>Estado Civil</th>
         </tr>
     </thead>
@@ -23,6 +23,7 @@
                 <td>@item.Nome</td>
                 <td>@item.Idade</td>
                 <td>@item.Credito</td>
+                <td>@item.DataNascimento</td>
                 @if (item.NecessidadesEspeciais == true)
                 {
                     <td>Sim</td>
@@ -31,7 +32,6 @@
                 {
                     <td>Não</td>
                 }
-                <td>@item.DataNascimento</td>
                 <td>@item.EstadoCivil</td>
             </tr>
         }
