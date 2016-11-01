@@ -20,6 +20,7 @@ namespace Fiap.Exemplo01.MVC.Web.Controllers
             lista.Add("Separado");
 
             ViewBag.estados = new SelectList(lista);
+
             return View();
         }
 
